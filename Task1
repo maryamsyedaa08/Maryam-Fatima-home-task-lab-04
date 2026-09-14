@@ -4,7 +4,7 @@ int main()
     float height;
     float weight;
     float BMI;
-    printf("Enter your height & weight:");
+    printf("Enter your height in cm & weightin kg:");
     scanf("%f %f",&height,&weight);
     height=(height/100);
     BMI=weight/(height*height);
