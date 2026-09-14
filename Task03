@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+	int withdraw,balance;
+	printf("Enter your balance:");
+	scanf("%d",&balance);
+	printf("Enter the amount you want to withdraw:");
+	scanf("%d",&withdraw);
+	if(withdraw%500==0&&withdraw<=25000&&withdraw<=balance)
+	{
+		printf("withdrawl succesful.\n remaining balance %d",balance-withdraw);
+	}
+	else
+	{
+		if(withdraw%500!=0)
+		{
+			printf("transaction failed as withdrawl amount is not the multiple of 500");
+		}
+	    else if (withdraw>25000)
+	    {
+	    	printf("transaction failed as daily limit has crossed");
+		}
+		else if(withdraw>balance)
+		{
+			printf("transaction failed as withdrawl amount is greater than balance");
+		}
+		else
+		{
+			printf("invalid transaction");
+		}
+	}
