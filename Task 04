@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char alpha;
+    printf("Enter any Alphabet:");
+    scanf("%c",&alpha);
+    switch(alpha)
+        {case'a': case'e': case'i': case'o': case'u':
+        printf("the character is a vowel");
+    break;
+         default:
+         printf("the character is a consonant");
+        }
+}
