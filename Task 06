@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main(){
+    int choice;
+    int num;
+
+
+    printf("1. Even/Odd 2. Prime 3. Square 4. Exit");
+    scanf("%d",&choice);
+
+
+    printf("Enter a number:");
+    scanf("%d",&num);
+
+    switch(choice){
+        case 1:
+        if (num%2==0){
+            printf("%d is even\n",num);
+        }
+        else{
+            printf("%d is odd\n",num);
+        }
+        break;
+
+        case 2:
+            if (num <= 1) {
+                    printf("%d is not prime\n", num);
+                }
+            else {
+                    int is_prime = 1;
+                    for (int i = 2; i < num ; i++) {
+                        if (num % i == 0) {
+                            is_prime = 0;
+                            break;
+                        }
+                    }
+                    if (is_prime) {
+                        printf("%d is prime\n", num);
+                    }
+                    else {
+                        printf("%d is not prime\n", num);
+                    }
+                }
+                break;
+        case 3:
+        printf("Square of %d is %d\n",num,num*num);
+        break;
+
+        case 4:
+        printf("Exiting the program\n");
+        break;
+
+        default:
+        printf("Invalid choice\n");
+    }
+}
