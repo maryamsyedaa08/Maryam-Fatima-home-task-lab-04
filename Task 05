@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+Int main(){
+    float unit;
+    printf("Enter units consumed:");
+    scanf("%f",&unit);
+
+
+    if(unit<=100)
+   {
+        printf("Total Bill: Rs. %.2f\n",unit*5);
+    }
+    else if(unit>100 && unit<=200){
+        printf("Total Bill: Rs. %.2f\n",100*5+(unit-100)*8);
+    }
+    else if(unit>200 && unit<=400){
+        printf("Total Bill: Rs. %.2f\n",100*5+(100*8)+(unit-200)*12);
+    }
+    else{
+        printf("Total Bill: Rs. %.2f\n",100*5+(100*8)+(200*12)+(unit-400)*15);
+    }
+}
